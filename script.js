@@ -10,12 +10,12 @@ const study = lab.util.fromObject({
     },
     {
       "type": "lab.plugins.Download",
-      "filePrefix": "study",
+      "filePrefix": "",
       "path": undefined
     }
   ],
   "metadata": {
-    "title": "",
+    "title": "アナグラム問題",
     "description": "",
     "repository": "",
     "contributors": ""
@@ -28,88 +28,12 @@ const study = lab.util.fromObject({
       "items": [
         {
           "type": "text",
-          "content": "アナグラム問題を解いていただきます。\nテキストの部分にひらがなで回答を入力してください\n",
-          "title": "アナグラム問題"
+          "title": "アナグラム問題",
+          "content": "いまからアナグラム問題に取り組んでいただきます。\n問題が表示されますので、テキストの部分にひらがな5文字を入力してください。\n解答が思いつかない場合は「１」を入力して次に進んでください。\n"
         }
       ],
       "scrollTop": true,
-      "submitButtonText": "Continue →",
-      "submitButtonPosition": "right",
-      "files": {},
-      "responses": {
-        "keypress": ""
-      },
-      "parameters": {},
-      "messageHandlers": {},
-      "title": "Page",
-      "timeout": "100000",
-      "tardy": true
-    },
-    {
-      "type": "lab.html.Page",
-      "items": [
-        {
-          "required": true,
-          "type": "input",
-          "attributes": {
-            "type": "text"
-          },
-          "label": "あせつけわ",
-          "help": "ひらがな5文字で入力してください。",
-          "name": ""
-        }
-      ],
-      "scrollTop": true,
-      "submitButtonText": "Continue →",
-      "submitButtonPosition": "right",
-      "files": {},
-      "responses": {
-        "(key)": "あわせつけ"
-      },
-      "parameters": {},
-      "messageHandlers": {},
-      "title": "Page",
-      "correctResponse": "つけあわせ",
-      "tardy": true
-    },
-    {
-      "type": "lab.html.Page",
-      "items": [
-        {
-          "required": true,
-          "type": "input",
-          "label": "あすしなら",
-          "help": "ひらがな5文字で入力して下さい。",
-          "name": ""
-        }
-      ],
-      "scrollTop": true,
-      "submitButtonText": "Continue →",
-      "submitButtonPosition": "right",
-      "files": {},
-      "responses": {
-        "click(key)": "あすしなら"
-      },
-      "parameters": {},
-      "messageHandlers": {},
-      "title": "Page",
-      "correctResponse": "すなあらし",
-      "tardy": true,
-      "timeout": "100000"
-    },
-    {
-      "type": "lab.html.Page",
-      "items": [
-        {
-          "required": true,
-          "type": "input",
-          "help": "ひらがな5文字で入力して下さい。",
-          "label": "しけみまお",
-          "name": ""
-        }
-      ],
-      "scrollTop": true,
-      "submitButtonText": "Continue →",
+      "submitButtonText": "始める →",
       "submitButtonPosition": "right",
       "files": {},
       "responses": {
@@ -117,161 +41,103 @@ const study = lab.util.fromObject({
       },
       "parameters": {},
       "messageHandlers": {},
-      "title": "Page"
+      "title": "Instraction"
     },
     {
-      "type": "lab.html.Page",
-      "items": [
+      "type": "lab.flow.Loop",
+      "templateParameters": [
         {
-          "required": true,
-          "type": "input",
-          "help": "ひらがな5文字で入力して下さい。",
-          "label": "あせとわり",
-          "name": ""
+          "word1": "あせつわけ",
+          "word2": "つけあわせ"
+        },
+        {
+          "word1": "あすしなら",
+          "word2": "すなあらし"
+        },
+        {
+          "word1": "しけみまお",
+          "word2": "まけおしみ"
+        },
+        {
+          "word1": "ふうりつた",
+          "word2": "うりふたつ"
+        },
+        {
+          "word1": "うとこりの",
+          "word2": "こうのとり"
+        },
+        {
+          "word1": "めおまひさ",
+          "word2": "おひめさま"
+        },
+        {
+          "word1": "みきおつす",
+          "word2": "おすみつき"
+        },
+        {
+          "word1": "わらしさま",
+          "word2": "さらまわし"
+        },
+        {
+          "word1": "きかつりあ",
+          "word2": "つきあかり"
+        },
+        {
+          "word1": "としおよひ",
+          "word2": "おひとよし"
         }
       ],
-      "scrollTop": true,
-      "submitButtonText": "Continue →",
-      "submitButtonPosition": "right",
+      "sample": {
+        "mode": "draw-shuffle"
+      },
       "files": {},
       "responses": {
         "": ""
       },
       "parameters": {},
       "messageHandlers": {},
-      "title": "Page"
-    },
-    {
-      "type": "lab.html.Page",
-      "items": [
-        {
-          "required": true,
-          "type": "input",
-          "label": "ふうつりた",
-          "help": "ひらがな5文字で入力して下さい。",
-          "name": ""
-        }
-      ],
-      "scrollTop": true,
-      "submitButtonText": "Continue →",
-      "submitButtonPosition": "right",
-      "files": {},
-      "responses": {
-        "": ""
-      },
-      "parameters": {},
-      "messageHandlers": {},
-      "title": "Page"
-    },
-    {
-      "type": "lab.html.Page",
-      "items": [
-        {
-          "required": true,
-          "type": "input",
-          "label": "うとこりの",
-          "help": "ひらがな5文字で入力して下さい。",
-          "name": ""
-        }
-      ],
-      "scrollTop": true,
-      "submitButtonText": "Continue →",
-      "submitButtonPosition": "right",
-      "files": {},
-      "responses": {
-        "": ""
-      },
-      "parameters": {},
-      "messageHandlers": {},
-      "title": "Page"
-    },
-    {
-      "type": "lab.html.Page",
-      "items": [
-        {
-          "required": true,
-          "type": "input",
-          "label": "らといひさ",
-          "help": "ひらがな5文字で入力して下さい。",
-          "name": ""
-        }
-      ],
-      "scrollTop": true,
-      "submitButtonText": "Continue →",
-      "submitButtonPosition": "right",
-      "files": {},
-      "responses": {
-        "": ""
-      },
-      "parameters": {},
-      "messageHandlers": {},
-      "title": "Page"
-    },
-    {
-      "type": "lab.html.Page",
-      "items": [
-        {
-          "required": true,
-          "type": "input",
-          "label": "めおまひさ",
-          "help": "ひらがな5文字で入力して下さい。",
-          "name": ""
-        }
-      ],
-      "scrollTop": true,
-      "submitButtonText": "Continue →",
-      "submitButtonPosition": "right",
-      "files": {},
-      "responses": {
-        "": ""
-      },
-      "parameters": {},
-      "messageHandlers": {},
-      "title": "Page"
-    },
-    {
-      "type": "lab.html.Page",
-      "items": [
-        {
-          "required": true,
-          "type": "input",
-          "label": "みきおつす",
-          "help": "ひらがな5文字で入力して下さい。",
-          "name": ""
-        }
-      ],
-      "scrollTop": true,
-      "submitButtonText": "Continue →",
-      "submitButtonPosition": "right",
-      "files": {},
-      "responses": {
-        "": ""
-      },
-      "parameters": {},
-      "messageHandlers": {},
-      "title": "Page"
-    },
-    {
-      "type": "lab.html.Page",
-      "items": [
-        {
-          "required": true,
-          "type": "input",
-          "label": "わらしさま",
-          "help": "ひらがな5文字で入力して下さい。",
-          "name": ""
-        }
-      ],
-      "scrollTop": true,
-      "submitButtonText": "Continue →",
-      "submitButtonPosition": "right",
-      "files": {},
-      "responses": {
-        "": ""
-      },
-      "parameters": {},
-      "messageHandlers": {},
-      "title": "Page"
+      "title": "anagram task",
+      "correctResponse": "${parameters.word2}",
+      "indexParameter": "自己憐憫",
+      "shuffleGroups": [],
+      "template": {
+        "type": "lab.flow.Sequence",
+        "files": {},
+        "responses": {
+          "": ""
+        },
+        "parameters": {},
+        "messageHandlers": {},
+        "title": "trial",
+        "shuffle": true,
+        "correctResponse": "${parameters.word2}",
+        "content": [
+          {
+            "type": "lab.html.Page",
+            "items": [
+              {
+                "required": true,
+                "type": "input",
+                "label": "${parameters.word1}",
+                "help": "ひらがな5文字で入力してください。",
+                "name": "dollarparameters.word1"
+              }
+            ],
+            "scrollTop": true,
+            "submitButtonText": "次の問題へ →",
+            "submitButtonPosition": "right",
+            "files": {},
+            "responses": {
+              "": ""
+            },
+            "parameters": {},
+            "messageHandlers": {},
+            "title": "Page",
+            "correctResponse": "${parameters.word2}",
+            "tardy": true
+          }
+        ]
+      }
     }
   ]
 })
