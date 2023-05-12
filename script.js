@@ -359,6 +359,12 @@ else if(this.parameters.word == "またりちわ" && response == "たちまわ�
   this.data.correct = '1';
 }
 
+else if(response == "1")
+
+{
+  this.data.correct = '2'
+}
+
 else
 {
   this.data.correct = '0';
@@ -373,7 +379,7 @@ else
               {
                 "required": true,
                 "type": "html",
-                "content": "\u003Cdiv class=\"content-horizontal-center\"\u003E\n  \u003Cspan style = \"color:black; font-size:6vh\"\u003E${this.state.correct==\"1\" ? \"正解\" : \"不正解\"}\u003C\u002Fspan\u003E\n\u003C\u002Fdiv\u003E",
+                "content": "\u003Cdiv class=\"content-horizontal-center\"\u003E\n  \u003Cspan style = \"color:black; font-size:6vh\"\u003E${this.state.correct==\"2\" ? \"残念\" : this.state.correct==\"1\" ? \"正解\":\"不正解\"}\u003C\u002Fspan\u003E\n\u003C\u002Fdiv\u003E",
                 "name": ""
               }
             ],
